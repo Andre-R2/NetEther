@@ -1,0 +1,121 @@
+site_name: NetEther
+site_description: Technical documentation for Networking, Linux, Infrastructure and Cybersecurity.
+repo_url: https://github.com/andre-r2/NetEther
+repo_name: andre-r2/NetEther
+
+theme:
+  name: material
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
+  palette:
+    - scheme: default 
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: IBM Plex Mono
+  features:
+    - navigation.sidebar.collapse
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: date
+
+extra_css:
+  - stylesheets/custom.css
+
+extra_javascript:
+  - javascripts/sidebar-toggle.js
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Networking:
+      - Fundamentals:
+          - What is a Network?: networking/whatsnetwork.md
+          - Ethernet: networking/ethernet.md
+          - Topologies: networking/topologies.md
+          - OSI Model: networking/osimodel.md
+          - TCP/IP Model: networking/tcpipmodel.md
+          - Encapsulation: networking/encapsulation.md
+          - Mac Address: networking/macaddress.m
+
+      - Routing:
+        - Static Routing: routing/static-routing.md
+        - OSPF: routing/ospf.md
+        - EIGRP: routing/eigrp.md
+        - BGP: routing/bgp.md
+
+      - IPv4 & IPv6:
+        - Binary: networking/binary.md
+        - IPv4 Adressing: networking/ipv4addr.md
+
+      - Switching:
+          - Switching: networking/switching.md
+          - VLANs: networking/vlans.md
+          - Inter-VLAN Routing: networking/inter-vlan-routing.md
+          - STP: networking/stp.md
+          - RSTP: networking/rstp.md
+          - EtherChannel: networking/etherchannel.md
+
+  - Linux:
+    - Ubuntu: linux/ubuntu.md
+    - Bash: linux/bash.md
+    - File System: linux/filesystem.md
+    - Permissions: linux/permissions.md
+    - Systemd: linux/systemd.md
+    - SSH: linux/ssh.md
+    - Nginx: linux/nginx.md
+    - DNS: linux/dns.md
+    - DHCP: linux/dhcp.md
+    - Samba: linux/samba.md
+
+  - Cybersecurity:
+      - Security+: cybersecurity/security-plus.md
+      - Firewalls: cybersecurity/firewalls.md
+      - VPN: cybersecurity/vpn.md
+      - IDS: cybersecurity/ids.md
+      - IPS: cybersecurity/ips.md
+      - Hardening: cybersecurity/hardening.md
+
+  - Labs:
+      - Packet Tracer: labs/packet-tracer.md
+      - GNS3: labs/gns3.md
+      - EVE-NG: labs/eve-ng.md
+      - VirtualBox: labs/virtualbox.md
+      - VMware: labs/vmware.md
+
+  - Resources:
+      - Cheat Sheets: resources/cheat-sheets.md
+      - Commands: resources/commands.md
+      - Downloads: resources/downloads.md
+
