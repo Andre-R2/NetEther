@@ -61,8 +61,9 @@ nav:
   - Home: index.md
   - Networking:
       - Fundamentals:
-          - What is a Network?: networking/whatsnetwork.md
-          - Types of Networks: networking/typesofnetworks.md
+          - What is a Network?: networking/what-is-a-network.md
+          - Types of Networks: networking/types-of-networks.md
+          - How Data Travels: networking/how-data-travels.md
           - Ethernet: networking/ethernet.md
           - Topologies: networking/topologies.md
           - OSI Model: networking/osimodel.md
