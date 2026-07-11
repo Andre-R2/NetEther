@@ -10,7 +10,7 @@ A PAN is a very short-range network designed to connect personal devices belongi
 
 ## LAN (Local Area Network)
 
-A LAN connects devices within a limited geographic area, such as a home, an office, or a building. It's the most commonly used type of network and allows devices to share resources and communicate with each other easily.
+A LAN connects devices within a limited geographic area, such as a home, an office, or a building. It's the most commonly used type of network and allows devices to share resources and communicate with each other easil
 
 ## MAN (Metropolitan Area Network)
 
