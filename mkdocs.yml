@@ -64,13 +64,16 @@ nav:
           - What is a Network?: networking/what-is-a-network.md
           - Types of Networks: networking/types-of-networks.md
           - How Data Travels: networking/how-data-travels.md
-          - Ethernet: networking/ethernet.md
-          - Topologies: networking/topologies.md
-          - OSI Model: networking/osimodel.md
-          - TCP/IP Model: networking/tcpipmodel.md
-          - Encapsulation: networking/encapsulation.md
-          - Mac Address: networking/macaddress.m
-
+          - OSI Model: networking/the-osi-model.md
+          - TCP/IP Model: 
+              - What is the TCP/IP Model: networking/tcpip/the-tcpip-model.md
+              - Physical Layer: networking/tcpip/tcpip-physical-layer.md
+              - Network Access Layer: networking/tcpip/tcpip-network-access-layer.md
+              - Internet Layer: networking/tcpip/tcpip-internet-layer.md
+              - Transport Layer: networking/tcpip/tcpip-transport-layer.md
+              - Application Layer: networking/tcpip/tcpip-application-layer.md
+      - Ethernet: 
+        - Overview: networking/ethernet/ethernet-overview.md
       - Routing:
         - Static Routing: routing/static-routing.md
         - OSPF: routing/ospf.md

@@ -24,12 +24,14 @@ Although TCP/IP was developed decades ago, its layered architecture has allowed 
 
 ## The layers
 
-TCP/IP organizes network communication into four layers:
+TCP/IP organizes network communication into five layers:
 
-- [Network Access Layer](network-access.md)
-- [Internet Layer](internet-layer.md)
-- [Transport Layer](transport-tcp.md)
-- [Application Layer](application-layer.md)
+- [Physical Layer](tcpip-physical-layer.md)
+- [Network Access Layer](tcpip-network-access-layer.md)
+- [Internet Layer](tcpip-internet-layer.md)
+- [Transport Layer](tcpip-transport-layer.md)
+- [Application Layer](tcpip-application-layer.md)
+
 
 Each layer has a specific responsibility and works together with the others to ensure reliable communication across interconnected networks. In the following sections, we'll explore each layer in detail.
 
