@@ -90,14 +90,12 @@ nav:
           - ARP: networking/ethernet/ethernet-arp.md
           - Traffic delivery Methods: networking/ethernet/ethernet-traffic-delivery-methods.md
           - Collision & Broadcast Domains: networking/ethernet/ethernet-collision-and-broadcast-domains.md
-          - Physical Media:
-            - Copper Ethernet: networking/ethernet/physical-media/eth-physical-media-copper-ethernet.md
-            - Fiber Optics: networking/ethernet/physical-media/eth-physical-media-fiber-optics.md
-            - RJ-45: networking/ethernet/physical-media/eth-physical-media-rj-45.md
-            - Straight-trough: networking/ethernet/physical-media/eth-physical-media-straight-trough.md
-            - Crossover: networking/ethernet/physical-media/eth-physical-media-crossover.md
-            - Auto MDI/MDI-X: networking/ethernet/physical-media/eth-physical-media-auto-mdix.md
-            - Ethernet Standards: networking/ethernet/physical-media/eth-physical-media-ethernet-standards.md
+          - Physical Media: networking/ethernet/ethernet-physical-media.md
+          - Ethernet Standards: networking/ethernet/ethernet-standards.md
+          - Power Over Ethernet (PoE): networking/ethernet/ethernet-power-over-ethernet.md
+          - MTU & Jumbo Frames: networking/ethernet/ethernet-mtu-and-jumbo-frames.md
+          - Auto Negotiation: networking/ethernet/ethernet-auto-negotiation
+
       - Routing:
           - Static Routing: routing/static-routing.md
           - OSPF: routing/ospf.md
