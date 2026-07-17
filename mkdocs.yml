@@ -7,22 +7,26 @@ theme:
   name: material
   logo: assets/images/logo.svg
   favicon: assets/images/logo.svg
+
   palette:
-    - scheme: default 
+    - scheme: default
       primary: blue
       accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+
     - scheme: slate
       primary: blue grey
       accent: blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
   font:
     text: Inter
     code: IBM Plex Mono
+
   features:
     - navigation.sidebar.collapse
     - navigation.instant
@@ -42,47 +46,67 @@ plugins:
 extra_css:
   - stylesheets/custom.css
 
-extra_javascript:
-  - javascripts/sidebar-toggle.js
-
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
   - pymdownx.highlight:
       anchor_linenums: true
+
   - pymdownx.tabbed:
       alternate_style: true
+
   - tables
+
   - toc:
       permalink: true
 
 nav:
   - Home: index.md
+
   - Networking:
       - Fundamentals:
           - What is a Network?: networking/what-is-a-network.md
           - Types of Networks: networking/types-of-networks.md
           - How Data Travels: networking/how-data-travels.md
           - OSI Model: networking/the-osi-model.md
-          - TCP/IP Model: 
+          - TCP/IP Model:
               - What is the TCP/IP Model: networking/tcpip/the-tcpip-model.md
               - Physical Layer: networking/tcpip/tcpip-physical-layer.md
               - Network Access Layer: networking/tcpip/tcpip-network-access-layer.md
               - Internet Layer: networking/tcpip/tcpip-internet-layer.md
               - Transport Layer: networking/tcpip/tcpip-transport-layer.md
               - Application Layer: networking/tcpip/tcpip-application-layer.md
-      - Ethernet: 
-        - Overview: networking/ethernet/ethernet-overview.md
+
+      - Ethernet:
+          - Overview: networking/ethernet/ethernet-overview.md
+          - MAC Adress: networking/ethernet/ethernet-mac-adress.md
+          - ARP: networking/ethernet/ethernet-arp.md
+          - Traffic delivery Methods: networking/ethernet/ethernet-traffic-delivery-methods.md
+          - Collision & Broadcast Domains: networking/ethernet/ethernet-collision-and-broadcast-domains.md
+          - Physical Media:
+            - Copper Ethernet: networking/ethernet/physical-media/eth-physical-media-copper-ethernet.md
+            - Fiber Optics: networking/ethernet/physical-media/eth-physical-media-fiber-optics.md
+            - RJ-45: networking/ethernet/physical-media/eth-physical-media-rj-45.md
+            - Straight-trough: networking/ethernet/physical-media/eth-physical-media-straight-trough.md
+            - Crossover: networking/ethernet/physical-media/eth-physical-media-crossover.md
+            - Auto MDI/MDI-X: networking/ethernet/physical-media/eth-physical-media-auto-mdix.md
+            - Ethernet Standards: networking/ethernet/physical-media/eth-physical-media-ethernet-standards.md
       - Routing:
-        - Static Routing: routing/static-routing.md
-        - OSPF: routing/ospf.md
-        - EIGRP: routing/eigrp.md
-        - BGP: routing/bgp.md
+          - Static Routing: routing/static-routing.md
+          - OSPF: routing/ospf.md
+          - EIGRP: routing/eigrp.md
+          - BGP: routing/bgp.md
 
       - IPv4 & IPv6:
-        - Binary: networking/binary.md
-        - IPv4 Adressing: networking/ipv4addr.md
+          - Binary: networking/binary.md
+          - IPv4 Adressing: networking/ipv4addr.md
 
       - Switching:
           - Switching: networking/switching.md
@@ -93,16 +117,16 @@ nav:
           - EtherChannel: networking/etherchannel.md
 
   - Linux:
-    - Ubuntu: linux/ubuntu.md
-    - Bash: linux/bash.md
-    - File System: linux/filesystem.md
-    - Permissions: linux/permissions.md
-    - Systemd: linux/systemd.md
-    - SSH: linux/ssh.md
-    - Nginx: linux/nginx.md
-    - DNS: linux/dns.md
-    - DHCP: linux/dhcp.md
-    - Samba: linux/samba.md
+      - Ubuntu: linux/ubuntu.md
+      - Bash: linux/bash.md
+      - File System: linux/filesystem.md
+      - Permissions: linux/permissions.md
+      - Systemd: linux/systemd.md
+      - SSH: linux/ssh.md
+      - Nginx: linux/nginx.md
+      - DNS: linux/dns.md
+      - DHCP: linux/dhcp.md
+      - Samba: linux/samba.md
 
   - Cybersecurity:
       - Security+: cybersecurity/security-plus.md
@@ -123,4 +147,3 @@ nav:
       - Cheat Sheets: resources/cheat-sheets.md
       - Commands: resources/commands.md
       - Downloads: resources/downloads.md
-
