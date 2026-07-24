@@ -96,15 +96,29 @@ nav:
           - MTU & Jumbo Frames: networking/ethernet/ethernet-mtu-and-jumbo-frames.md
           - Auto Negotiation: networking/ethernet/ethernet-auto-negotiation
 
-      - Routing:
-          - Static Routing: routing/static-routing.md
-          - OSPF: routing/ospf.md
-          - EIGRP: routing/eigrp.md
-          - BGP: routing/bgp.md
-
-      - IPv4 & IPv6:
-          - Binary: networking/binary.md
-          - IPv4 Adressing: networking/ipv4addr.md
+      - IPv4:
+          - Fundamentals: 
+            - What Is IPv4?: networking/ipv4/fundamentals/ipv4-what-is-ipv4.md
+            - IPv4 Address Structure: networking/ipv4/fundamentals/ipv4-address-structure.md
+            - Binary to Decimal: networking/ipv4/fundamentals/ipv4-binary-to-decimal.md
+            - Address classes (A-E): networking/ipv4/fundamentals/ipv4-address-classes.md
+            - Public vs Private address: networking/ipv4/fundamentals/ipv4-public-vs-private-address.md
+            - Reserved IPv4 Address: networking/ipv4/fundamentals/ipv4-reserved-address.md
+          
+          - Subnetting:
+            - Overview: networking/ipv4/subnetting/subnet-overview.md
+            - Subnet Masks: networking/ipv4/subnetting/subnet-masks.md
+            - CIDR Notation: networking/ipv4/subnetting/subnet-cidr-notation.md
+            - Prefix Lenght: networking/ipv4/subnetting/subnet-prefix-lenght.md
+            - Network, Broadcast & Host Addresses: networking/ipv4/subnetting/subnet-network-broadcast-&-host-addresses.md
+            - Calculating Subnets: networking/ipv4/subnetting/subnet-calculating-subnets.md
+            - VLSM: networking/ipv4/subnetting/subnet-vlsm.md
+            - VLSM Practice: networking/ipv4/subnetting/subnet-vlsm-practice.md
+            - Route Summarization: networking/ipv4/subnetting/subnet-route-summarization.md
+            - Wildcard Masks: networking/ipv4/subnetting/subnet-wildcard-masks.md
+            
+      - IPv6:
+        - test.md: networking/test.md
 
       - Switching:
           - Switching: networking/switching.md
