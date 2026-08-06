@@ -24,13 +24,3 @@ Some of the most common components associated with the Physical Layer include:
 - Network Interface Card (NIC)
 
 > **Note:** The Network Interface Card (NIC) is commonly associated with the Physical Layer because it converts bits into physical signals and vice versa. However, it also performs functions at the Data Link Layer, such as handling MAC addresses and processing Ethernet frames.
-
-## Related Topics
-
-- How Bits Become Physical Signals
-- Transmission Media
-- Ethernet Standards
-- Fiber Optics
-- Wireless Transmission
-- Network Interface Card (NIC)
-- Repeaters and Hubs

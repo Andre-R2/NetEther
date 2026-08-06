@@ -33,8 +33,7 @@ TCP/IP organizes network communication into five layers:
 - [Application Layer](tcpip-application-layer.md)
 
 
-Each layer has a specific responsibility and works together with the others to ensure reliable communication across interconnected networks. In the following sections, we'll explore each layer in detail.
+Each layer has a specific responsibility and works together with the others to ensure reliable communication across interconnected networks. 
 
 ---
 
-**Next:** [Network Access layer](network-access.md)

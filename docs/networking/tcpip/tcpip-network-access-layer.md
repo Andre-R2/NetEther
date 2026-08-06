@@ -2,11 +2,11 @@
 
 ## Overview
 
-The **Data Link Layer** is responsible for preparing data for transmission across the local network. It receives packets from the Internet Layer, encapsulates them into **frames**, and passes them to the Physical Layer for transmission.
+The Data Link Layer is responsible for preparing data for transmission across the local network. It receives packets from the Internet Layer, encapsulates them into frames, and passes them to the Physical Layer for transmission.
 
-Its main responsibility is to ensure that two **directly connected devices** can exchange information in an organized and reliable manner.
+Its main responsibility is to ensure that two directly connected devices can exchange information in an organized and reliable manner.
 
-Unlike the Internet Layer, which is responsible for delivering packets across multiple networks, the Data Link Layer only cares about communication between neighboring devices. In other words, it's responsible for delivering the frame to the **next hop** on the local network.
+Unlike the Internet Layer, which is responsible for delivering packets across multiple networks, the Data Link Layer only cares about communication between neighboring devices. In other words, it's responsible for delivering the frame to the next hop on the local network.
 
 ## Frame structure
 
@@ -26,12 +26,10 @@ This information allows the receiving device to identify who sent the frame, det
 
 ## MAC addresses, not IP addresses
 
-The Data Link Layer works with **MAC addresses**, not IP addresses. It does not understand routing, IP networks, ports, or applications. Its only responsibility is to deliver the frame to the next device on the local network.
+The Data Link Layer works with MAC addresses, not IP addresses. It does not understand routing, IP networks, ports, or applications. Its only responsibility is to deliver the frame to the next device on the local network.
 
 ## Why it matters
 
 Without the Data Link Layer, the Physical Layer could still transmit bits, but the receiving device would have no reliable way to determine where a frame begins and ends, who sent it, who should receive it, or whether the transmission arrived with errors.
 
 ---
-
-**Next:** [Internet layer](tcpip-internet-layer.md)

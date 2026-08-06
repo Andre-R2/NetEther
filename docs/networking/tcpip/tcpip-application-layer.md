@@ -23,8 +23,6 @@ For this reason, the Application Layer defines the protocols that allow two appl
 
 ## Protocol Data Unit (PDU)
 
-The PDU at the Application Layer is simply called **Data** — at this level, it hasn't been segmented, packaged, or framed yet; that happens as it moves down through the lower layers.
+The PDU at the Application Layer is simply called Data — at this level, it hasn't been segmented, packaged, or framed yet; that happens as it moves down through the lower layers.
 
 ---
-
-**Next:** Communication protocols
