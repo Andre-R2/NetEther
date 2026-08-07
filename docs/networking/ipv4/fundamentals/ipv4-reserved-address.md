@@ -58,8 +58,4 @@ A device does not always have an IPv4 address.
 
 For example, during the DHCP process, a host has not yet received an address from the DHCP server. In this situation, it uses the unspecified address (`0.0.0.0`) to indicate that no IPv4 address has been assigned yet.
 
-> **Note:** Later, in the Routing module, you'll encounter `0.0.0.0/0`, which represents the default route. Although they look similar, they have different meanings depending on the context.
-
 ---
-
-**Next:** IPv4 Address Classes

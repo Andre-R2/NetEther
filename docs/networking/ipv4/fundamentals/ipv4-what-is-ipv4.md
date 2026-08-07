@@ -26,7 +26,7 @@ IPv4 introduces hierarchical logical addressing, allowing routers to identify bo
 
 Before IPv4, early networks lacked a universal protocol capable of interconnecting different networks.
 
-One of the protocols used at the time was the **Network Control Program (NCP)**, which was designed for ARPANET. Although it allowed communication between connected systems, it wasn't designed to support a large, interconnected network of independent networks.
+One of the protocols used at the time was the Network Control Program (NCP), which was designed for ARPANET. Although it allowed communication between connected systems, it wasn't designed to support a large, interconnected network of independent networks.
 
 IPv4 addressed this limitation by introducing a standardized Layer 3 protocol that:
 
@@ -39,7 +39,7 @@ These capabilities became the foundation of the modern Internet.
 
 ## Where does IPv4 fit in the TCP/IP model?
 
-IPv4 operates at the **Internet layer** of the TCP/IP model.
+IPv4 operates at the Internet layer of the TCP/IP model.
 
 Its responsibility is to provide logical addressing and route packets between networks. While Layer 2 protocols deliver frames within a local network, IPv4 enables communication across multiple interconnected networks.
 
@@ -58,10 +58,8 @@ IPv4 does not guarantee that packets will arrive, arrive in order, or arrive onl
 
 Despite the introduction of IPv6, IPv4 remains the most widely deployed Internet Protocol.
 
-Its continued use is largely due to the enormous amount of existing infrastructure built around it. Technologies such as **Network Address Translation (NAT)** have also extended its lifespan by allowing many devices to share a single public IPv4 address.
+Its continued use is largely due to the enormous amount of existing infrastructure built around it. Technologies such as Network Address Translation (NAT)*have also extended its lifespan by allowing many devices to share a single public IPv4 address.
 
 As a result, IPv4 and IPv6 coexist in many modern networks.
 
 ---
-
-**Next:** Binary fundamentals

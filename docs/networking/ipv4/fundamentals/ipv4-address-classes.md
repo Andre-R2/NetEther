@@ -27,21 +27,20 @@ In the classful addressing system, the first bits of the first octet were reserv
 | E | 4 bits | `1111xxxx` | 240–255 |
 
 !!! note
-    Although the binary pattern for Class A allows values from **0–127**, the ranges **0.0.0.0/8** and **127.0.0.0/8** are reserved. Therefore, usable Class A networks begin at **1.0.0.0** and end at **126.0.0.0**.
+    Although the binary pattern for Class A allows values from 0–127, the ranges 0.0.0.0/8 and 127.0.0.0/8 are reserved. Therefore, usable Class A networks begin at 1.0.0.0 and end at 126.0.0.0.
 
 ## Limitations of classful addressing
 
 The classful addressing system was simple, but it wasted a significant number of IPv4 addresses.
 
-For example, suppose an organization required approximately **300 host addresses**:
+For example, suppose an organization required approximately 300 host addresses:
 
-- A **Class C** network supports only **254 usable hosts**, which is insufficient.
-- The next available option was a **Class B** network, capable of supporting **65,534 hosts** — far more than required.
+- A Class C network supports only 254 usable hosts, which is insufficient.
+- The next available option was a Class B network, capable of supporting 65,534 hosts — far more than required.
 
 As a result, organizations often received address blocks much larger than necessary, leaving thousands of addresses permanently unused.
 
-This lack of flexibility became a major problem as the Internet expanded rapidly. Eventually, classful addressing could no longer scale efficiently, leading to the adoption of **CIDR (Classless Inter-Domain Routing)**, which replaced fixed address classes with variable-length network prefixes.
+This lack of flexibility became a major problem as the Internet expanded rapidly. Eventually, classful addressing could no longer scale efficiently, leading to the adoption of CIDR (Classless Inter-Domain Routing), which replaced fixed address classes with variable-length network prefixes.
 
 ---
 
-**Next:** CIDR

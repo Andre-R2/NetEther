@@ -44,12 +44,12 @@ Borrowing additional network bits reduces the number of available host bits whil
 
 Two addresses are reserved in every subnet, which is why usable hosts is always `2^n − 2`:
 
-- **Network Address** — identifies the subnet itself
-- **Broadcast Address** — used to reach every host within that subnet
+- Network Address — identifies the subnet itself
+- Broadcast Address — used to reach every host within that subnet
 
 ## Subnet increment (block size)
 
-The subnet increment — also called the **block size** — is calculated as:
+The subnet increment — also called the block size — is calculated as:
 
 ```text
 256 − Subnet Mask value (of the interesting octet)
@@ -63,10 +63,10 @@ The increment represents the distance between the starting addresses of consecut
 
 Once the current Network Address and the subnet increment are known, everything else follows automatically:
 
-- **First Host** = Current Network + 1
-- **Next Network** = Current Network + Increment
-- **Broadcast** = Next Network − 1
-- **Last Host** = Broadcast − 1
+- First Host = Current Network + 1
+- Next Network = Current Network + Increment
+- Broadcast = Next Network − 1
+- Last Host = Broadcast − 1
 
 ## Putting it all together
 
@@ -82,5 +82,3 @@ Back to the original example — `192.168.1.0/24` split into 4 subnets (`/26`, i
 Notice how each Network Address is just the previous one plus the increment (`64`) — and every Broadcast is one less than the *next* subnet's Network Address. This is the entire mechanism behind subnetting: once you know the increment, the rest is just addition and subtraction.
 
 ---
-
-**Next:** Subnetting by hosts

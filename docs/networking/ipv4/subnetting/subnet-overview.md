@@ -18,16 +18,16 @@ Subnetting solves this problem by dividing a large network into smaller logical 
 
 ## Other benefits
 
-**Easier management.** Subnetting allows departments, buildings, or physical locations to be organized into separate subnets. This makes troubleshooting, administration, and future network expansion much easier.
+Easier management. Subnetting allows departments, buildings, or physical locations to be organized into separate subnets. This makes troubleshooting, administration, and future network expansion much easier.
 
-**Contained impact.** Although subnetting isn't a security mechanism by itself, the logical separation between subnets helps contain failures and limits the impact of security incidents or malware outbreaks to a single network segment.
+Contained impact. Although subnetting isn't a security mechanism by itself, the logical separation between subnets helps contain failures and limits the impact of security incidents or malware outbreaks to a single network segment.
 
-**Scalable addressing.** Instead of assigning one large network to every organization, networks can be designed according to actual requirements, making much more efficient use of the available IPv4 address space.
+Scalable addressing. Instead of assigning one large network to every organization, networks can be designed according to actual requirements, making much more efficient use of the available IPv4 address space.
 
 ## How subnetting works
 
-Subnetting works by **borrowing bits from the host portion** of an IPv4 address and using them to create additional network identifiers. This allows a single network to be divided into multiple smaller subnets.
+Subnetting works by borrowing bits from the host portion of an IPv4 address and using them to create additional network identifiers. This allows a single network to be divided into multiple smaller subnets.
 
-Subnetting relies on **subnet masks** and **CIDR prefix notation** to define how the network and host portions of an IPv4 address are divided. 
+Subnetting relies on subnet masks and CIDR prefix notation to define how the network and host portions of an IPv4 address are divided. 
 
 ---
