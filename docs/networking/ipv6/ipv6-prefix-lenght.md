@@ -14,7 +14,7 @@ The `/64` indicates that `2001:db8:1234:5678` is the network prefix. The remaini
 
 ## Why /64 is the standard
 
-`/64` is the standard prefix length in most IPv6 networks because it works correctly with **SLAAC (Stateless Address Autoconfiguration)**, where devices generate their own IPv6 address automatically. It's also the block size expected by many protocols and operating systems.
+`/64` is the standard prefix length in most IPv6 networks because it works correctly with SLAAC (Stateless Address Autoconfiguration), where devices generate their own IPv6 address automatically. It's also the block size expected by many protocols and operating systems.
 
 ## Common prefix lengths
 
@@ -28,5 +28,3 @@ The `/64` indicates that `2001:db8:1234:5678` is the network prefix. The remaini
 | /32 | Typical ISP allocation | Internet providers |
 
 ---
-
-**Next:** IPv6 address types
