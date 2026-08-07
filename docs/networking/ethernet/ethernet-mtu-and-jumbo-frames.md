@@ -2,17 +2,17 @@
 
 ## MTU
 
-The **Maximum Transmission Unit (MTU)** is the maximum size, measured in **bytes**, of an IP packet that can be transmitted over a network interface without fragmentation.
+The Maximum Transmission Unit (MTU) is the maximum size, measured in bytes, of an IP packet that can be transmitted over a network interface without fragmentation.
 
-In standard Ethernet networks, the default MTU is **1500 bytes**.
+In standard Ethernet networks, the default MTU is 1500 bytes.
 
-The MTU acts as a size limit for packets transmitted across the network. If a packet exceeds the MTU of an interface, it must either be **fragmented** into smaller packets (IPv4) or discarded, requiring retransmission by the sender (IPv6).
+The MTU acts as a size limit for packets transmitted across the network. If a packet exceeds the MTU of an interface, it must either be fragmented into smaller packets (IPv4) or discarded, requiring retransmission by the sender (IPv6).
 
 Using an appropriate MTU improves network efficiency by reducing fragmentation and minimizing protocol overhead.
 
 ## Jumbo Frames
 
-**Jumbo Frames** are Ethernet frames that support payloads larger than the standard **1500-byte MTU**, typically around **9000 bytes** (depending on the equipment).
+Jumbo Frames are Ethernet frames that support payloads larger than the standard 1500-byte MTU, typically around 9000 bytes (depending on the equipment).
 
 Their primary purpose is to improve network efficiency by allowing more data to be transmitted in each frame.
 
@@ -23,6 +23,6 @@ Compared to standard Ethernet frames, Jumbo Frames offer several advantages:
 - Lower CPU utilization, since network devices process fewer frames.
 - Improved throughput in high-bandwidth environments.
 
-Jumbo Frames are commonly used in **data centers**, **storage networks**, **virtualization platforms**, and **high-performance computing**.
+Jumbo Frames are commonly used in data centers, storage networks, virtualization platforms, and high-performance computing.
 
-> **Note:** Every device along the communication path must support the same MTU. If one device does not support Jumbo Frames, communication issues or packet drops may occur.
+Every device along the communication path must support the same MTU. If one device does not support Jumbo Frames, communication issues or packet drops may occur.
