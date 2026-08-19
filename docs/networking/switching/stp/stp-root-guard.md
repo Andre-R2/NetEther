@@ -16,18 +16,16 @@ But that's not what you want — an access switch, or one connected by mistake, 
 
 That's exactly what Root Guard prevents — it's a network policy, not a loop-prevention mechanism like the other STP protections.
 
-If a switch connected to a Root-Guard-enabled port has a lower BID than the switches that are actually allowed to become Root Bridge, Root Guard blocks **only that link** and isolates the switch that tried to become Root.
+If a switch connected to a Root-Guard-enabled port has a lower BID than the switches that are actually allowed to become Root Bridge, Root Guard blocks only that link and isolates the switch that tried to become Root.
 
-The port enters a **Root Inconsistent** state — meaning it's blocking the link because it's receiving BPDUs that shouldn't exist there. It stays in that state until the connected switch stops advertising itself as Root.
+The port enters a Root Inconsistent state — meaning it's blocking the link because it's receiving BPDUs that shouldn't exist there. It stays in that state until the connected switch stops advertising itself as Root.
 
 Root Guard still allows switches to be connected — it just prevents them from announcing a better Root Bridge than expected. If it receives a superior BPDU, it temporarily blocks the port to preserve the Root Bridge's intended location in the network.
 
-!!! note "Root Guard vs BPDU Guard"
-    These two get mixed up often, but they solve different problems:
+These two get mixed up often, but they solve different problems:
 
-    - **BPDU Guard** assumes a port should **never** see a BPDU at all (typically a PortFast/access port) — if one shows up, the port goes to **err-disabled** and stays down until you manually recover it.
-    - **Root Guard** assumes a port **can** see BPDUs (it's connected to a real switch) — it just won't allow that neighbor to become Root. The port goes to **root-inconsistent**, and it **recovers automatically** as soon as the superior BPDUs stop arriving — no manual intervention needed.
+- BPDU Guard assumes a port should never see a BPDU at all (typically a PortFast/access port) — if one shows up, the port goes to err-disabled and stays down until you manually recover it.
+- Root Guard assumes a port can see BPDUs (it's connected to a real switch) — it just won't allow that neighbor to become Root. The port goes to root-inconsistent, and it recovers automatically as soon as the superior BPDUs stop arriving — no manual intervention needed.
 
 ---
 
-**Next:** Loop Guard

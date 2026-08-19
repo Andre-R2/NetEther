@@ -20,7 +20,7 @@ Bridge ID (BID) = Bridge Priority + Extended System ID + MAC Address
 - Lowest Bridge Priority wins.
 - If priorities are equal, the lowest MAC Address wins.
 
-**Example:**
+Example:
 
 | Switch | Priority | VLAN ID | MAC Address |
 |---|---:|---:|---|
@@ -47,14 +47,13 @@ Once the Root Bridge is elected, every non-root switch calculates the lowest-cos
 | 1 Gbps | 4 |
 | 10 Gbps | 2 |
 
-!!! note
-    The Root Path Cost is the cumulative cost of all links from a switch to the Root Bridge. STP always selects the path with the lowest total cost.
+The Root Path Cost is the cumulative cost of all links from a switch to the Root Bridge. STP always selects the path with the lowest total cost.
 
 ![STP example](../../../assets/net-assets/stp-example-light.svg#only-light)
 ![STP example](../../../assets/net-assets/stp-example-dark.svg#only-dark)
 
 
-**Example** (all links at 1 Gbps, cost 4 each):
+Example (all links at 1 Gbps, cost 4 each):
 
 ```text
 SW2 → SW1           = Cost 4
@@ -82,7 +81,7 @@ If two switches on the same segment advertise the same Root Path Cost, ties are 
 1. Lowest Bridge ID
 2. If still tied, lowest Port ID
 
-**Example:** SW2 and SW3 both have a Root Path Cost of 4. STP compares their Bridge IDs — if SW2's is lower, SW2's port becomes the Designated Port, and SW3's port becomes an Alternate Port.
+Example: SW2 and SW3 both have a Root Path Cost of 4. STP compares their Bridge IDs — if SW2's is lower, SW2's port becomes the Designated Port, and SW3's port becomes an Alternate Port.
 
 ### Alternate Port (AP)
 
@@ -126,13 +125,8 @@ SW3 stops receiving BPDUs through its Root Port, detects that its path to the Ro
 SW3 → SW2 → SW1     (Root Path Cost = 8)
 ```
 
-The port that was previously an Alternate Port is selected as the new Root Port and transitions through the classic STP states — Blocking → Listening → Learning → Forwarding — before it starts forwarding traffic again.
+The port tusly an Alternate Port is selected as the new Root Port and transitions through the classic STP states — Blocking → Listening → Learning → Forwarding — before it starts forwarding traffic again.
 
-!!! note "Why this takes so long"
-    Classic 802.1D uses fairly conservative default timers: Hello every 2 seconds, Max Age 20 seconds, and Forward Delay 15 seconds (applied twice — once for Listening, once for Learning). Add it up, and a topology change can take 30–50 seconds to fully converge. This slowness is exactly the problem that RSTP (802.1w) was designed to fix.
+Classic 802.1D uses fairly conservative default timers: Hello every 2 seconds, Max Age 20 seconds, and Forward Delay 15 seconds (applied twice — once for Listening, once for Learning). Add it up, and a topology change can take 30–50 seconds to fully converge. This slowness is exactly the problem that RSTP (802.1w) was designed to fix.
 
 ---
-
-**Next:** RSTP (Rapid Spanning Tree Protocol)
-
-

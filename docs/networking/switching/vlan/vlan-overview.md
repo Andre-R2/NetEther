@@ -55,16 +55,14 @@ Internally, the switch maintains information about VLAN membership and the ports
 
 ## VLANs and Network Layers
 
-VLANs operate at Layer 2 of the OSI model.
+When an organization needs to connect multiple subnets to the same switch, subnetting alone is not enough to provide Layer 2 segmentation.
 
-A VLAN itself does not have an IP address because it is purely a Layer 2 concept. IP addressing belongs to Layer 3.
+Subnetting is a Layer 3 technique that divides an IP address space into multiple subnets. 
+Communication between different subnets requires a Layer 3 device, such as a router or a Layer 3 switch.
 
-Communication between VLANs requires a Layer 3 device, such as a router or a Layer 3 switch, through an interface associated with each VLAN.
+VLANs, on the other hand, are a Layer 2 technology used to segment a switch into multiple independent broadcast domains. Without VLANs, the switch operates as a single broadcast domain, broadcast frames are flooded across all ports within that domain.
 
-Although they work together, a VLAN and a subnet are not the same thing.
-
-- A VLAN separates Ethernet networks and broadcast domains at Layer 2.
-- A subnet separates IP networks at Layer 3.
+Therefore, subnetting provides a Layer 3 segmentation, while VLANs provide a Layer 2 segmentation. Each VLAN is commonly associated with its own IP subnet, allowing the Layer 2 and Layer 3 segmentation to align.
 
 A common enterprise design looks like this:
 
@@ -78,7 +76,7 @@ VLAN 20
 
 This relationship is considered a best practice because it creates a clear mapping between Layer 2 segmentation and Layer 3 addressing.
 
-However, the VLAN itself is **not** the subnet. They are different technologies operating at different layers.
+However, the VLAN itself is not the subnet. They are different technologies operating at different layers.
 
 ## VLANs in Network Security
 

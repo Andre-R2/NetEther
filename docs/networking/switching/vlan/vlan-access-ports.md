@@ -37,7 +37,7 @@ If a device in VLAN 10 needs to communicate with a device in VLAN 20, the frame 
 
 The Layer 3 device receives the packet, performs routing, and builds a new Ethernet frame for the destination VLAN.
 
-This process is known as Inter-VLAN Routing, which will be covered later.
+This process is known as Inter-VLAN Routing.
 
 ## Important
 

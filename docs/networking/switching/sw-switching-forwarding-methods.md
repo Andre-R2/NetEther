@@ -8,13 +8,13 @@ The forwarding method defines when the switch starts forwarding a frame and whet
 
 The three main forwarding methods are:
 
-- **Store-and-Forward**
-- **Cut-Through**
-- **Fragment-Free**
+- Store-and-Forward
+- Cut-Through
+- Fragment-Free
 
 ## Store-and-Forward
 
-**Store-and-Forward** is the most commonly used switching method in modern networks.
+Store-and-Forward is the most commonly used switching method in modern networks.
 
 With this method, the switch receives the entire Ethernet frame before forwarding it to the destination port.
 
@@ -34,7 +34,7 @@ The main drawback is increased latency because the switch must wait until the co
 
 ## Cut-Through
 
-**Cut-Through** switching reduces latency by forwarding frames before the entire frame has been received.
+Cut-Through switching reduces latency by forwarding frames before the entire frame has been received.
 
 The switch only reads the beginning of the frame, specifically the destination MAC address. Once the destination port is identified, the switch immediately starts transmitting the frame.
 
@@ -47,13 +47,13 @@ The frame continues entering the switch while it is being forwarded to the desti
 
 ### Disadvantage
 
-Because the switch does not receive the complete frame, it cannot verify the **FCS**.
+Because the switch does not receive the complete frame, it cannot verify the FCS.
 
 If the frame contains errors, the switch will forward the corrupted frame because it cannot detect the problem.
 
 ## Fragment-Free
 
-**Fragment-Free** switching is a compromise between Store-and-Forward and Cut-Through.
+Fragment-Free switching is a compromise between Store-and-Forward and Cut-Through.
 
 In this method, the switch waits until it receives the first 64 bytes of the frame before forwarding it.
 

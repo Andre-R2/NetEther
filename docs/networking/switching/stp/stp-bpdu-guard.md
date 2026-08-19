@@ -10,11 +10,9 @@ In classic STP, BPDU Guard is indispensable because STP takes a few seconds to c
 
 ## Its role in RSTP
 
-In RSTP, the risk of a temporary loop is much lower, since convergence is very fast and an Edge Port that receives a BPDU immediately loses that status and starts behaving like a normal RSTP port. Here, BPDU Guard isn't as necessary to compensate for convergence speed — its main purpose becomes **enforcing network policy**: if a port was meant exclusively for endpoints, it should never receive a BPDU in the first place.
+In RSTP, the risk of a temporary loop is much lower, since convergence is very fast and an Edge Port that receives a BPDU immediately loses that status and starts behaving like a normal RSTP port. Here, BPDU Guard isn't as necessary to compensate for convergence speed — its main purpose becomes enforcing network policy: if a port was meant exclusively for endpoints, it should never receive a BPDU in the first place.
 
-!!! note
-    When BPDU Guard shuts a port down, it goes into **err-disabled** state — and it stays that way. The port doesn't recover on its own; you either have to manually cycle it (`shutdown` / `no shutdown`) or configure **errdisable recovery**, which automatically re-enables the port after a set timeout. 
+When BPDU Guard shuts a port down, it goes into err-disabled state — and it stays that way. The port doesn't recover on its own; you either have to manually cycle it (`shutdown` / `no shutdown`) or configure errdisable recovery, which automatically re-enables the port after a set timeout. 
 
 ---
 
-**Next:** BPDU Filter

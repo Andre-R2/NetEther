@@ -23,12 +23,9 @@ Both trunk links are used simultaneously, but each VLAN still maintains its own 
 
 The main advantage of PVST is that it preserves Layer 2 loop prevention while distributing traffic from different VLANs across different physical links — improving bandwidth utilization and providing basic load balancing.
 
-!!! note "PVST vs PVST+"
-    The original PVST ran over Cisco's legacy ISL trunking, which had a field for carrying per-VLAN STP information natively. Since ISL was phased out in favor of the standard 802.1Q, Cisco created PVST+, which tunnels that same per-VLAN BPDU information over a regular 802.1Q trunk — allowing PVST to keep working even when the trunk also connects to non-Cisco equipment that only understands standard (single-instance) STP.
 
-!!! note "The trade-off"
-    Running a separate STP instance per VLAN doesn't come for free — every instance means its own BPDUs, its own calculations, and its own CPU/memory overhead on every switch. In a network with hundreds of VLANs, this adds up fast. This scalability concern is exactly what MST (Multiple Spanning Tree) was later designed to solve, by mapping multiple VLANs onto a smaller number of spanning tree instances.
+The original PVST ran over Cisco's legacy ISL trunking, which had a field for carrying per-VLAN STP information natively. Since ISL was phased out in favor of the standard 802.1Q, Cisco created PVST+, which tunnels that same per-VLAN BPDU information over a regular 802.1Q trunk — allowing PVST to keep working even when the trunk also connects to non-Cisco equipment that only understands standard (single-instance) STP.
+
+Running a separate STP instance per VLAN doesn't come for free — every instance means its own BPDUs, its own calculations, and its own CPU/memory overhead on every switch. In a network with hundreds of VLANs, this adds up fast. This scalability concern is exactly what MST (Multiple Spanning Tree) was later designed to solve, by mapping multiple VLANs onto a smaller number of spanning tree instances.
 
 ---
-
-**Next:** Rapid PVST+ (RPVST+)

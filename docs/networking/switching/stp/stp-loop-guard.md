@@ -22,7 +22,7 @@ The problem is that the original forwarding path may still be active. If both pa
 
 Loop Guard prevents this situation.
 
-Instead of allowing the Alternate Port to transition to Forwarding simply because BPDUs have disappeared, Loop Guard places the port into a special state called **Loop Inconsistent**.
+Instead of allowing the Alternate Port to transition to Forwarding simply because BPDUs have disappeared, Loop Guard places the port into a special state called Loop Inconsistent.
 
 In this state, the port remains blocked until valid BPDUs are received again.
 
@@ -30,7 +30,7 @@ Once BPDUs resume, the port automatically leaves the Loop Inconsistent state and
 
 ## Important
 
-Loop Guard does **not** interfere with normal STP convergence.
+Loop Guard does not interfere with normal STP convergence.
 
 If the link actually fails and the interface goes down, STP or RSTP recalculates the topology normally and activates the appropriate backup path.
 

@@ -24,7 +24,7 @@ IEEE 802.1Q solves this problem by inserting a VLAN tag into Ethernet frames bef
 
 A standard Ethernet frame does not contain VLAN information.
 
-When a frame leaves a **trunk port**, the switch inserts a 4-byte 802.1Q tag between the Source MAC Address and the EtherType/Length field.
+When a frame leaves a trunk port, the switch inserts a 4-byte 802.1Q tag between the Source MAC Address and the EtherType/Length field.
 
 The tagged frame looks like this:
 
@@ -36,11 +36,11 @@ The tagged frame looks like this:
 
 The 802.1Q tag contains several fields, including:
 
-- **VLAN ID (VID)** — Identifies the VLAN to which the frame belongs.
-- **Priority Code Point (PCP)** — Used for Layer 2 Quality of Service (QoS).
-- **Drop Eligible Indicator (DEI)** — Indicates whether the frame may be dropped during network congestion.
+- VLAN ID (VID) — Identifies the VLAN to which the frame belongs.
+- Priority Code Point (PCP) — Used for Layer 2 Quality of Service (QoS).
+- Drop Eligible Indicator (DEI) — Indicates whether the frame may be dropped during network congestion.
 
-For example, if the VLAN ID is 10, the receiving switch immediately knows that the frame belongs to **VLAN 10**.
+For example, if the VLAN ID is 10, the receiving switch immediately knows that the frame belongs to VLAN 10.
 
 ## Trunk Communication
 
@@ -61,9 +61,3 @@ VLAN 30 Frame ── Tag: VLAN 30 ──┘
 When a tagged frame is forwarded out of an access port, the switch removes the 802.1Q tag before transmitting it.
 
 As a result, end devices never see VLAN tags.
-
-!!! important
-
-    End devices are unaware of IEEE 802.1Q.
-
-    VLAN tags exist only while frames travel across **trunk links** between network devices. Frames entering or leaving an **access port** are always transmitted untagged.

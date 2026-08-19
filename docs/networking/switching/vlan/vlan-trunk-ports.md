@@ -63,8 +63,8 @@ When an untagged frame arrives on a trunk port, the receiving switch automatical
 
 For proper operation, the Native VLAN must match on both ends of the trunk link. If each side is configured with a different Native VLAN, a Native VLAN mismatch occurs, which can lead to connectivity problems and, in some cases, security vulnerabilities.
 
-!!! note "Security consideration"
-    A Native VLAN mismatch isn't just a connectivity annoyance — it can enable a VLAN hopping attack (via double-tagging), where an attacker crafts a frame with two 802.1Q tags to jump into a VLAN it shouldn't have access to. Common best practice: avoid using the default VLAN 1 as the Native VLAN, and set it to an unused VLAN ID instead.
+
+A Native VLAN mismatch isn't just a connectivity annoyance — it can enable a VLAN hopping attack (via double-tagging), where an attacker crafts a frame with two 802.1Q tags to jump into a VLAN it shouldn't have access to. Common best practice: avoid using the default VLAN 1 as the Native VLAN, and set it to an unused VLAN ID instead.
 
 ---
 

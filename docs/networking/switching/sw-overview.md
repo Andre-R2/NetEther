@@ -14,7 +14,7 @@ As a result, every transmission behaves like a physical broadcast, forcing every
 
 ## The problem with hubs
 
-The biggest drawback of hubs was **collisions**.
+The biggest drawback of hubs was collisions.
 
 If two devices transmitted simultaneously, their electrical signals collided, corrupting the transmitted data.
 
@@ -28,7 +28,7 @@ Because all devices connected to a hub share the same communication medium, the 
 
 Switches were designed to eliminate these limitations.
 
-A **switch** is a network device that connects multiple devices within a Local Area Network (LAN), forwarding Ethernet frames only to their intended destination instead of sending them to every connected device.
+A switch is a network device that connects multiple devices within a Local Area Network (LAN), forwarding Ethernet frames only to their intended destination instead of sending them to every connected device.
 
 Unlike a hub, a switch examines each Ethernet frame, reads the destination MAC address, and consults its MAC Address Table (CAM Table) to determine the correct outgoing port.
 
@@ -36,12 +36,7 @@ For example, if the switch has learned that a particular device is connected to 
 
 Another major improvement is that every switch port represents its own collision domain, allowing multiple devices to communicate simultaneously without interfering with one another.
 
-Modern switches also operate in **Full-Duplex** mode, allowing devices to transmit and receive data simultaneously. Hubs, on the other hand, operated in **Half-Duplex**, where a device could either transmit or receive, but never both at the same time.
+Modern switches also operate in Full-Duplex mode, allowing devices to transmit and receive data simultaneously. Hubs, on the other hand, operated in Half-Duplex, where a device could either transmit or receive, but never both at the same time.
 
 The combination of MAC-based forwarding, independent collision domains, and Full-Duplex communication made collisions virtually disappear in modern Ethernet networks.
 
-## What's next?
-
-In order to forward Ethernet frames to the correct destination, a switch must first learn where every device is connected.
-
-It accomplishes this by building and maintaining a **MAC Address Table (CAM Table)**.

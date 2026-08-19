@@ -10,10 +10,10 @@ Entries can be registered in two ways:
 
 | Type | How it's added | Behavior |
 |---|---|---|
-| **Dynamic** | Automatically, from the source MAC of every frame received | Temporary — stays as long as traffic keeps arriving from that MAC. Removed after a period of inactivity (**MAC aging**). |
-| **Static** | Manually configured | Permanent, used for extra security or stability. Takes priority over dynamic entries if there's a conflict. |
+| Dynamic | Automatically, from the source MAC of every frame received | Temporary — stays as long as traffic keeps arriving from that MAC. Removed after a period of inactivity (MAC agin). |
+| Static | Manually configured | Permanent, used for extra security or stability. Takes priority over dynamic entries if there's a conflict. |
 
-If the switch receives traffic from the same MAC but on a **different port**, it deletes the old entry and registers the new one — keeping the table accurate as devices move around the network.
+If the switch receives traffic from the same MAC but on a different port, it deletes the old entry and registers the new one — keeping the table accurate as devices move around the network.
 
 MAC address table looks like this:
 
@@ -30,14 +30,14 @@ MAC address table looks like this:
 
 | Column | Description |
 |--------|-------------|
-| **VLAN** | VLAN where the MAC address was learned. |
-| **MAC Address** | Layer 2 hardware address of the device. |
-| **Type** | Indicates whether the entry is **Dynamic** or **Static**. |
-| **Port** | Switch interface associated with that MAC address. |
+| VLAN | VLAN where the MAC address was learned. |
+| MAC Address | Layer 2 hardware address of the device. |
+| Type | Indicates whether the entry is Dynamic or Static. |
+| Port | Switch interface associated with that MAC address. |
 
 ## Direct forwarding vs. flooding
 
-When the switch has the destination MAC-to-port mapping already in its table, it can forward the frame as **unicast**, directly to that one port — avoiding flooding entirely.
+When the switch has the destination MAC-to-port mapping already in its table, it can forward the frame as unicast, directly to that one port — avoiding flooding entirely.
 
 But not every flooding event happens for the same reason — there are three distinct scenarios.
 
@@ -49,18 +49,14 @@ The switch checks the Ethernet header: `Dest MAC: FF:FF:FF:FF:FF:FF` means Ether
 
 ## Unknown unicast flooding
 
-Sometimes a device already has both the IP **and** the MAC address of another device — so it skips the broadcast ARP Request entirely and starts sending unicast traffic directly.
+Sometimes a device already has both the IP and the MAC address of another device — so it skips the broadcast ARP Request entirely and starts sending unicast traffic directly.
 
-When those frames reach the switch, it checks its MAC table. If the destination MAC isn't registered yet, the switch performs **unknown unicast flooding** — sending the frame out every port except the one it arrived on.
+When those frames reach the switch, it checks its MAC table. If the destination MAC isn't registered yet, the switch performs unknown unicast flooding — sending the frame out every port except the one it arrived on.
 
 When the destination device receives the frame, it replies to the originating device. As that reply passes through the switch, it automatically learns the destination device's MAC address and associates it with the port it arrived on. From that point on, the switch can forward future unicast frames directly to that port, without flooding again.
 
 ## Multicast flooding
 
-Happens when the frame is multicast and the switch doesn't have **IGMP Snooping** (IPv4) or **MLD Snooping** (IPv6) enabled. Since the switch has no way of knowing which ports have members of that multicast group, it sends the frame to every port in the VLAN.
-
-!!! note A switch learns from the source MAC address and forwards using the destination MAC address.-
+Happens when the frame is multicast and the switch doesn't have IGMP Snooping (IPv4) or MLD Snooping (IPv6) enabled. Since the switch has no way of knowing which ports have members of that multicast group, it sends the frame to every port in the VLAN.
 
 ---
-
-**Next:** VLANs
