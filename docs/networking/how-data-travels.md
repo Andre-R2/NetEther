@@ -22,4 +22,3 @@ But how do devices know what information to add to each packet, and when to add 
  
 ---
  
-**Next:** [The OSI model](the-osi-model.md)
