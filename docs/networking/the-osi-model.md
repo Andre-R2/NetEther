@@ -63,13 +63,7 @@ A PDU is the unit of data that a layer of the OSI model processes and transmits.
 | 2 | Data Link | Frame |
 | 1 | Physical | Bit |
 
-!!! tip "Mnemonic"
-    A common way to remember the order (Layer 7 down to Layer 1) is: **P**lease **D**o **N**ot **T**hrow **S**ausage **P**izza **A**way — Application, Presentation, Session, Transport, Network, Data Link, Physical.
-
-## Conclusion
-
 The OSI model remains one of the most important concepts in networking. Although modern networks are primarily based on the TCP/IP model, the OSI model provides a universal way to understand how network communication works, design interoperable systems, and troubleshoot problems by separating the communication process into clearly defined layers.
 
 ---
 
-**Next:** [The TCP/IP model](tcpip/the-tcpip-model.md)
