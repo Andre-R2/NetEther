@@ -22,16 +22,4 @@ The origin of modern computer networks dates back to the late 1960s with the dev
 
 Today, data networks are one of the fundamental pillars of modern technological infrastructure. They enable Internet connectivity, remote work, cloud computing, and many of the digital services used every day.
 
-## Related topics
-
-- Hosts and endpoints
-- Network devices
-- Communication protocols
-- Network media
-- ARPANET
-- Redundancy
-- Fault tolerance
-
 ---
- 
-**Next:** [Types of networks](types-of-networks.md)
