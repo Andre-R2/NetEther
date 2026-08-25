@@ -43,6 +43,6 @@ When a device wants to send a packet to another device but only has its IPv6 add
 
 Step 4 relies on switches being able to forward that multicast frame only to the ports where interested devices are — which requires MLD snooping (the IPv6 equivalent of IGMP snooping) to be enabled. Without it, the switch simply floods the multicast frame to every port in the VLAN, much like a broadcast — the frame still only gets processed by the intended device at Layer 3, but every other device on the segment still receives it at Layer 2.
 
-This same NS/NA exchange is reused for Duplicate Address Detection (DAD) — the difference is that during DAD, a device sends the Neighbor Solicitation for its *own* tentative address, from the unspecified address (`::`), to check whether anyone else on the segment already has it.
+This same NS/NA exchange is reused for Duplicate Address Detection (DAD) — the difference is that during DAD, a device sends the Neighbor Solicitation for its own tentative address, from the unspecified address (`::`), to check whether anyone else on the segment already has it.
 
 ---
