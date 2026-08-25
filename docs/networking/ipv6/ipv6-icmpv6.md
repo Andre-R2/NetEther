@@ -64,8 +64,8 @@ Although ICMPv6 defines many message types, these are the ones that matter most 
 | Packet Too Big | Reports that a packet exceeds the MTU allowed on the link. |
 | Time Exceeded | Indicates the packet ran out of Hop Limit before reaching its destination. |
 
-!!! note
-    Router Solicitation (RS), Router Advertisement (RA), Neighbor Solicitation (NS), Neighbor Advertisement (NA), and Redirect are all part of the Neighbor Discovery Protocol (NDP) message set — the protocol that replaces functions like ARP and handles router discovery, neighbor discovery, duplicate address detection, and IPv6 device autoconfiguration. Redirect is part of that same NDP message family too, even though its specific job (pointing a host to a better next-hop) is different from the discovery/autoconfiguration role the other four play.
+
+Router Solicitation (RS), Router Advertisement (RA), Neighbor Solicitation (NS), Neighbor Advertisement (NA), and Redirect are all part of the Neighbor Discovery Protocol (NDP) message set — the protocol that replaces functions like ARP and handles router discovery, neighbor discovery, duplicate address detection, and IPv6 device autoconfiguration. Redirect is part of that same NDP message family too, even though its specific job (pointing a host to a better next-hop) is different from the discovery/autoconfiguration role the other four play.
 
 ---
 
