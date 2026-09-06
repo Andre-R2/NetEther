@@ -76,8 +76,8 @@ nav:
           - Types of Networks: networking/types-of-networks.md
           - How Data Travels: networking/how-data-travels.md
           - OSI Model: networking/the-osi-model.md
-          - TCP/IP Model:
-              - What is the TCP/IP Model: networking/tcpip/the-tcpip-model.md
+          - TCP/IP:
+              - Overview: networking/tcpip/tcpip-overview.md
               - Physical Layer: networking/tcpip/tcpip-physical-layer.md
               - Network Access Layer: networking/tcpip/tcpip-network-access-layer.md
               - Internet Layer: networking/tcpip/tcpip-internet-layer.md
@@ -94,7 +94,7 @@ nav:
           - Ethernet Standards: networking/ethernet/ethernet-standards.md
           - Power Over Ethernet (PoE): networking/ethernet/ethernet-power-over-ethernet.md
           - MTU & Jumbo Frames: networking/ethernet/ethernet-mtu-and-jumbo-frames.md
-          - Auto Negotiation: networking/ethernet/ethernet-auto-negotiation
+          - Auto Negotiation: networking/ethernet/ethernet-auto-negotiation.md
 
       - IPv4:
           - Fundamentals: 
@@ -118,15 +118,82 @@ nav:
             - Wildcard Masks: networking/ipv4/subnetting/subnet-wildcard-masks.md
             
       - IPv6:
-        - test.md: networking/test.md
+        - Overview: networking/ipv6/ipv6-overview.md
+        - IPv6 Address Structure: networking/ipv6/ipv6-address-structure.md
+        - Prefix Lenght: networking/ipv6/ipv6-prefix-lenght.md
+        - Types of IPv6 Addresses: networking/ipv6/ipv6-types-of-addresses.md
+        - SLAAC: networking/ipv6/ipv6-slaac.md
+        - EUI-64: networking/ipv6/ipv6-eui-64.md
+        - DHCPv6: networking/ipv6/ipv6-dhcpv6.md
+        - ICMPv6: networking/ipv6/ipv6-icmpv6.md
+        - NDP: networking/ipv6/ipv6-neighbor-discovery-protocol.md
 
       - Switching:
-          - Switching: networking/switching.md
-          - VLANs: networking/vlans.md
-          - Inter-VLAN Routing: networking/inter-vlan-routing.md
-          - STP: networking/stp.md
-          - RSTP: networking/rstp.md
-          - EtherChannel: networking/etherchannel.md
+          - Overview: networking/switching/sw-overview.md
+          - MAC Address Table: networking/switching/sw-mac-address-table.md
+          - Switching Forwarding Methods: networking/switching/sw-switching-forwarding-methods.md
+          - VLANs:
+            - Overview: networking/switching/vlan/vlan-overview.md
+            - Access Ports: networking/switching/vlan/vlan-access-ports.md
+            - 802.1Q Tagging: networking/switching/vlan/vlan-802.1Q-tagging.md
+            - Trunk Ports: networking/switching/vlan/vlan-trunk-ports.md
+
+          - Spanning Tree Protocol (STP):
+            - Overview: networking/switching/stp/stp-overview.md
+            - Layer 2 Loops: networking/switching/stp/stp-layer-2-loops.md
+            - STP: networking/switching/stp/stp-how-stp-works.md
+            - RSTP: networking/switching/stp/stp-rstp.md
+            - PVST+: networking/switching/stp/stp-pvst+.md
+            - RPVST+: networking/switching/stp/stp-rpvst+.md
+            - PortFast: networking/switching/stp/stp-portfast.md
+            - BPDU Filter: networking/switching/stp/stp-bpdu-filter.md
+            - BPDU Guard: networking/switching/stp/stp-bpdu-guard.md 
+            - Root Guard: networking/switching/stp/stp-root-guard.md
+            - Loop Guard: networking/switching/stp/stp-loop-guard.md
+          
+          - Layer 2 Attacks: 
+            - MAC Flooding: networking/switching/attacks/attacks-mac-flooding.md 
+            - MAC Spoofing: networking/switching/attacks/attacks-mac-spoofing.md 
+            - DHCP Spoofing: networking/switching/attacks/attacks-dhcp-spoofing.md
+            - ARP Spoofing: networking/switching/attacks/attacks-arp-spoofing.md
+
+          - Layer 2 Security:
+            - Port Security: networking/switching/security/sec-port-security.md
+            - DHCP Snooping: networking/switching/security/sec-dhcp-snooping.md
+            - Dynamic ARP Inspection (DAI): networking/switching/security/sec-dai.md
+
+      - Routing:
+        - Overview: networking/routing/routing-overview.md
+        - Routing Table: networking/routing/routing-table.md
+        - Static Routing: networking/routing/routing-static.md
+        - Inter-VLAN:
+          - Inter-VLAN Routing: networking/routing/inter-vlan/inter-vlan-routing.md
+          - Inter-VLAN Troubleshooting: networking/routing/inter-vlan/inter-vlan-troubleshooting.md
+
+        - Dynamic Routing:
+          - Autonomous Systems: networking/routing/dynamic/dy-autonomous-systems.md
+          - RIP: networking/routing/dynamic/dy-rip.md
+          - EIGRP: networking/routing/dynamic/dy-eigrp.md
+          - OSPF:
+            - Overview: networking/routing/dynamic/ospf/ospf-overview.md
+            - Router ID: networking/routing/dynamic/ospf/ospf-router-id.md
+            - Neighbor: networking/routing/dynamic/ospf/ospf-neighbor.md
+            - Adjacency: networking/routing/dynamic/ospf/ospf-adjacency.md
+            - LSAs: networking/routing/dynamic/ospf/ospf-lsas.md
+            - SPF: networking/routing/dynamic/ospf/ospf-spf.md
+            - DR/BDR: networking/routing/dynamic/ospf/ospf-dr-bdr.md
+            - Multi-Area: networking/routing/dynamic/ospf/ospf-multi-area.md
+
+          - BGP: networking/routing/dynamic/dy-bgp.md
+          - IS-IS: networking/routing/dynamic/dy-is-is.md
+      
+      - Network Protocols:
+        - First-Hop Redundancy:
+          - HSRP: networking/net-protocols/first-hop-redundancy/hsrp.md
+        
+        - EtherChannel:
+          - LACP: networking/net-protocols/ether-channel/lacp.md
+          - PAgP: networking/net-protocols/ether-channel/pagp.md
 
   - Linux:
       - Ubuntu: linux/ubuntu.md
